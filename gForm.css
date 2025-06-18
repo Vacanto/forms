@@ -1,0 +1,111 @@
+:root {
+  --bg: #e0f7fa;
+  --fg: #004d40;
+  --input-bg: #ffffff;
+  --input-shadow: rgba(0, 0, 0, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.4);
+}
+[data-theme="dark"] {
+  --bg: #00251a;
+  --fg: #b2dfdb;
+  --input-bg: #00332b;
+  --input-shadow: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: rgb(139, 154, 208);
+  color: #000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.theme-switch {
+  position: absolute;
+  top: 16px; right: 16px;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+}
+
+fieldset {
+  border: none;
+  background: var(--glass-bg);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: inset 8px 8px 16px var(--input-shadow),
+              inset -8px -8px 16px rgba(255,255,255,0.7);
+}
+
+legend {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.9em;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: none;
+  border-radius: 8px;
+  background: var(--input-bg);
+  box-shadow: 4px 4px 8px var(--input-shadow),
+              -4px -4px 8px rgba(136, 214, 214, 0.377);
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+input:focus {
+  outline:rgb(15, 177, 113);
+  box-shadow: inset 4px 4px 8px var(--input-shadow),
+              inset -4px -4px 8px rgba(107, 24, 190, 0.313);
+  transform: scale(1.02);
+  transition: ease-in-out;
+}
+
+small {
+  font-size: 0.75em;
+  display: block;
+  color: #333;
+  margin-top: 4px;
+}
+
+button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  border: solid lawngreen;
+  border-radius: 8px;
+  background: var(--input-bg);
+  box-shadow: 4px 4px 8px var(--input-shadow),
+              -4px -4px 8px rgba(255,255,255,0.7);
+  font-size: 1em;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.5s;
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 6px 6px 12px var(--input-shadow),
+              -6px -6px 12px red;
+}

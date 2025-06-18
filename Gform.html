@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Details Form</title>
+  <link rel="stylesheet" href="gForm.css" />
+</head>
+<body>
+
+<!-- Theme toggle for dark/light mode -->
+<label class="theme-switch">
+  <input type="checkbox" id="themeToggle" aria-label="Toggle dark mode">
+  <span>🌙</span>
+</label>
+
+<form novalidate>
+  <fieldset>
+    <legend>Student Details</legend>
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="fname" required autocomplete="given-name" 
+           inputmode="text" title="Enter your first name (e.g., John)">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lname" required autocomplete="family-name" 
+           inputmode="text" title="Enter your last name (e.g., Doe)">
+
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob" required title="Select your birth date">
+
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" required min="1" max="120" 
+           inputmode="numeric" title="Enter your age (1 to 120)">
+
+    <label for="domain">Domain</label>
+    <input type="text" id="domain" name="domain" inputmode="text" 
+           title="Enter your field of interest (e.g., Web Development, AI)">
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required 
+           pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=]).{8,}" 
+           title="Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.">
+
+    <small>Password must be at least 8 characters and include uppercase, lowercase, a number, and a symbol.</small>
+
+    <button type="submit">Submit</button>
+  </fieldset>
+
+  <p><pre>Welcome to Tap Academy</pre></p>
+</form>
+</body>
+</html>
